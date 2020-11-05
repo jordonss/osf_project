@@ -1,12 +1,12 @@
 {
-	"name": "optimizedhtml",
+	"name": "osf_project",
 	"version": "5.0.0",
-	"description": "OptimizedHTML 5 - Start HTML Template",
+	"description": "Start HTML Template",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "WebDesign Master",
+	"author": "Jordonss",
 	"license": "ISC",
 	"devDependencies": {
 		"bootstrap": "^4.5.3",
