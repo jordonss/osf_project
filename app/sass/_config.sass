@@ -1,10 +1,11 @@
 // USER VARIABLES SECTION
 
-$accent: orange // Accent Color
+$accent: #84bc22 // Accent Color
 $fontsize: 16px // Body Font Size
-$textcolor: #333 // Text Color
+$textcolor: #45413e // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
 $roboto: Roboto, sans-serif // Roboto Font Family
+$lato: Lato, sans-serif // Lato Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px
@@ -14,8 +15,8 @@ $gutter: $grid-gutter-width
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
-// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
-// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+@import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
 
@@ -31,6 +32,12 @@ $gutter: $grid-gutter-width
 @include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2')
 @include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2')
 @include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+@include font('Lato', normal, 400, '../fonts/Lato-Regular.woff2')
+@include font('Lato', italic, 400, '../fonts/Lato-Italic.woff2')
+@include font('Lato', normal, 700, '../fonts/Lato-Bold.woff2')
+@include font('Lato', normal, 900, '../fonts/Lato-Black.woff2')
+
+
 
 // GENERAL DOCUMENT STYLES
 
@@ -49,7 +56,7 @@ input, textarea
 		border-color: green
 
 body
-	font-family: $roboto
+	font-family: $lato
 	font-size: $fontsize
 	min-width: 320px
 	position: relative
