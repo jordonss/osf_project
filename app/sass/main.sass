@@ -26,6 +26,8 @@
     text-decoration: none
     color: #45413e
     height: 150%
+  li
+    position: static
 
 .dropdown
   .nav-link
@@ -67,29 +69,30 @@ ul
       text-decoration: none
       color: #fff
 
-.nav-item
-  &:hover
-    .dropdown-menu
-      position: absolute
-      left: 0
-      right: 0
-      display: block
-      background-color: #262a32
-      width: 900px
-      margin-top: 19px
+// .nav-item
+//   &:hover
+//     .dropdown-menu
+//       position: absolute
+//       left: 0
+//       right: 0
+//       display: block
+//       background-color: #262a32
+//       width: 100%
+//       margin-top: 19px
 
 .menu-img
   min-width: 300px
   height: auto
 
 
-// .dropdown-menu
-//   display: block
-//   width: 100%
-//   background-color: #262a32
-//   min-width: 1170px
-//   margin-top: 19px
-//   margin-left: -410px
+.dropdown-menu
+  left: 0
+  right: 0
+  display: block
+  width: 100%
+  background-color: #262a32
+  margin-top: 19px
+
 
 
 // .lang-menu
