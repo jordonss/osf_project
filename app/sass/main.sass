@@ -10,11 +10,13 @@
   align-items: center
 
 .container
-  margin: 0
+  max-width: 1280px
   padding: 0
 
 .nav-logo
-  left: 0
+  min-width: 170px
+  height: auto
+  margin-left: 20px
 
 .navbar
   position: relative
@@ -42,17 +44,24 @@
       text-decoration: none
       background-color: #262a32
       color: #fff
-      border-bottom: 2px solid $accent
+      border-bottom: 3px solid $accent
 
 .navbar-nav
-  width: 100%
+  width: 70%
   height: 100%
   margin: 0
-  padding: 0
+  padding-left: 100px
   display: flex
   list-style: none
   justify-content: center
   align-items: center
+  white-space: nowrap
+
+ul
+  &:hover
+    .dropdown
+      
+
 
 .dropdown-toggle
   &::after
@@ -81,7 +90,7 @@ ul
       display: block
       width: 1280px
       background-color: #262a32
-      margin-top: 12px
+      margin-top: 4px
       padding: 55px
       .col-md-2
         margin: 0px 10px
@@ -100,6 +109,8 @@ ul
   width: 100%
   padding-top: 50px
 
+.nav-lang
+  min-width: 100px
 
 .nav-lang-menu
   width: auto
@@ -111,28 +122,32 @@ ul
   justify-content: center
   align-items: center
 
-
 .lang-link
   text-decoration: none
   color: #45413e
-  &:hover
-    .dropdown-content
-      left: 0
-      right: 0
-      display: block
-      width: 280px
-      background-color: #262a32
-      margin-top: 9px
-      padding: 55px
+  .dropdown-menu
+    left: 0
+    right: 0
+    display: none
+    width: 280px
+    background-color: #262a32
+    margin-top: 9px
+    padding: 55px
 
 .lang-item
   text-decoration: none
   color: #45413e
   height: 25px
+  opacity: 0.5
   .dropdown-toggle
     &::after
       margin-left: 5px
 
+.lang-item
+  a
+    text-decoration: none
+    &:hover
+      color: #45413e
 
 .nav-currency-menu
   width: auto
@@ -163,14 +178,23 @@ ul
   text-decoration: none
   color: #45413e
   height: 40px
+  opacity: 0.5
   .dropdown-toggle
     &::after
       margin-left: 5px
 
+.currency-item
+  a
+    text-decoration: none
+    &:hover
+      color: #45413e
+
 .user-box
   display: flex
   height: 60px
+  margin-right: 20px
   img
     margin-left: 40px
     margin-top: 20px
     width: 28px
+    opacity: 0.5
