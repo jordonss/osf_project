@@ -14,6 +14,7 @@
   padding: 0
 
 .nav-logo
+  left: 0
 
 .navbar
   position: relative
@@ -25,7 +26,7 @@
   justify-content: center
   .nav-item
     color: #45413e
-    margin: 0 15px
+    margin: 0 5px
     text-decoration: none
     height: 40px
   .nav-link
@@ -36,18 +37,12 @@
     position: static
 
 .dropdown
-  .nav-link 
-    &:hover 
+  .nav-link
+    &:hover
       text-decoration: none
       background-color: #262a32
       color: #fff
       border-bottom: 2px solid $accent
-
-// .dropdown-menu
-//   a
-//     &:hover
-//       color: #fff
-//       text-decoration: none
 
 .navbar-nav
   width: 100%
@@ -61,7 +56,7 @@
 
 .dropdown-toggle
   &::after
-    margin-left: 20px
+    margin-left: 25px
 
 h6
   color: #fff
@@ -79,17 +74,17 @@ ul
       font-family: lato
 
 .nav-item
-  &:hover 
+  &:hover
     .dropdown-menu
       left: 0
       right: 0
       display: block
       width: 1280px
       background-color: #262a32
-      margin-top: 9px
+      margin-top: 12px
       padding: 55px
       .col-md-2
-        margin: 0px 30px
+        margin: 0px 10px
       h6
         padding-left: 5px
         padding-bottom: 15px
@@ -102,7 +97,8 @@ ul
           text-decoration: none
 
 .menu-img
-  min-width: 320px
+  width: 100%
+  padding-top: 50px
 
 
 .nav-lang-menu
@@ -115,15 +111,16 @@ ul
   justify-content: center
   align-items: center
 
+
 .lang-link
   text-decoration: none
   color: #45413e
   &:hover
-    .dropdown-menu
+    .dropdown-content
       left: 0
       right: 0
       display: block
-      width: 1280px
+      width: 280px
       background-color: #262a32
       margin-top: 9px
       padding: 55px
@@ -131,5 +128,49 @@ ul
 .lang-item
   text-decoration: none
   color: #45413e
+  height: 25px
+  .dropdown-toggle
+    &::after
+      margin-left: 5px
 
 
+.nav-currency-menu
+  width: auto
+  height: auto
+  margin: 0
+  padding: 0
+  display: flex
+  list-style: none
+  justify-content: center
+  align-items: center
+
+.currency-link
+  display: block
+  padding: 7px
+  text-decoration: none
+  color: #45413e
+  &:hover
+    .dropdown-content
+      left: 0
+      right: 0
+      display: block
+      width: 280px
+      background-color: #262a32
+      margin-top: 9px
+      padding: 55px
+
+.currency-item
+  text-decoration: none
+  color: #45413e
+  height: 40px
+  .dropdown-toggle
+    &::after
+      margin-left: 5px
+
+.user-box
+  display: flex
+  height: 60px
+  img
+    margin-left: 40px
+    margin-top: 20px
+    width: 28px
