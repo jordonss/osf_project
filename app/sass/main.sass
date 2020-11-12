@@ -13,30 +13,28 @@
   max-width: 1280px
   padding: 0
 
-.nav-logo
-  min-width: 170px
-  height: auto
-  margin-left: 20px
-
-.navbar
-  position: relative
-  width: 100%
-  height: 100%
-  margin: 0
-  padding: 0
+.header-logo
   display: flex
-  justify-content: center
-  .nav-item
-    color: #45413e
-    margin: 0 5px
+  align-items: center
+  text-decoration: none
+  &:hover
     text-decoration: none
-    height: 40px
-  .nav-link
-    text-decoration: none
-    color: #45413e
-    height: 150%
-  li
-    position: static
+  .header-logo-img
+    margin-right: 5px
+  .header-logo-osf
+    display: block
+    font-size: 32px
+    color: #011847
+    font-weight: 900
+    margin-bottom: -15px
+    letter-spacing: 4px
+    text-transform: uppercase
+    &:hover
+      span
+        text-decoration: none
+  .header-logo-text
+    font-size: 18px
+    color: $accent
 
 .main-menu-wrapper
   display: flex
@@ -63,17 +61,44 @@
       background-color: #262a32
       color: #fff
       border-bottom: 3px solid $accent
+    li
+      padding-left: 20px
 
 .navbar-nav
-  width: 70%
+  position: static
+  flex-direction: row
+  width: 100%
   height: 100%
-  margin: 0
-  padding-left: 100px
-  display: flex
-  list-style: none
-  justify-content: center
-  align-items: center
+  min-height: auto
+  margin: 0 
+  padding: 14px 0 0
+  background-color: transparent
+  ransition: 0s
   white-space: nowrap
+  .nav-item
+    color: #45413e
+    margin: 0 5px
+    text-decoration: none
+    height: 40px
+  .nav-link
+    text-decoration: none
+    color: #45413e
+    height: 150%
+    padding-left: 10px
+    padding-right: 20px
+  li
+    position: static
+
+.navbar-nav
+  ul
+    li
+      a
+        text-decoration: none
+        color: #fff
+        font-size: 14px
+        font-weight: normal
+        font-family: lato
+
 
 .dropdown-toggle
   &::after
@@ -85,25 +110,16 @@ h6
   font-weight: 900
   font-size: 16px
 
-ul
-  li
-    a
-      text-decoration: none
-      color: #fff
-      font-size: 16px
-      font-weight: normal
-      font-family: lato
 
 .nav-item
   &:hover
     .dropdown-menu
-      left: 0
-      right: 0
+      position: absolute
       display: block
-      min-width: 1280px
       background-color: #262a32
-      margin-top: 4px
-      padding: 35px
+      margin-top: 1px
+      padding: 25px
+      top: 78px
       .col-md-2
         margin: 0px 10px
       h6
@@ -115,7 +131,7 @@ ul
         padding-right: 50px
       a
         &:hover
-          color: #fff
+          color: $accent
           text-decoration: none
 
 .menu-pic
@@ -129,92 +145,22 @@ ul
   object-fit: cover
   border-radius: 2%
 
-.nav-lang
-  min-width: 100px
-
-.nav-lang-menu
-  width: auto
-  height: auto
-  margin: 0
-  padding: 0
-  display: flex
-  list-style: none
-  justify-content: center
-  align-items: center
-
-.lang-link
-  text-decoration: none
-  color: #45413e
-  .dropdown-menu
-    left: 0
-    right: 0
-    display: none
-    width: 280px
-    background-color: #262a32
-    margin-top: 9px
-    padding: 55px
-
-.lang-item
-  text-decoration: none
-  color: #45413e
-  height: 25px
+.main-menu-select
+  width: 100%
+  cursor: pointer
   opacity: 0.5
-  .dropdown-toggle
-    &::after
-      margin-left: 5px
-
-.lang-item
-  a
-    text-decoration: none
-    &:hover
-      color: #45413e
-
-.nav-currency-menu
-  width: auto
-  height: auto
-  margin: 0
-  padding: 0
-  display: flex
-  list-style: none
-  justify-content: center
-  align-items: center
-
-.currency-link
-  display: block
-  padding: 7px
-  text-decoration: none
-  color: #45413e
-  &:hover
-    .dropdown-content
-      left: 0
-      right: 0
-      display: block
-      width: 280px
-      background-color: #262a32
-      margin-top: 9px
-      padding: 55px
-
-.currency-item
-  text-decoration: none
-  color: #45413e
-  height: 40px
-  opacity: 0.5
-  .dropdown-toggle
-    &::after
-      margin-left: 5px
-
-.currency-item
-  a
-    text-decoration: none
-    &:hover
-      color: #45413e
+  border: none
+  outline: none
 
 .user-box
   display: flex
-  height: 60px
-  margin-right: 20px
+  justify-content: space-between
+  align-items: center
+  max-width: 220px
+  height: 100%
+  padding-left: 0
+  top: 20px
   img
-    margin-left: 40px
-    margin-top: 20px
     width: 28px
     opacity: 0.5
+
