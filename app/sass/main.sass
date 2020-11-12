@@ -68,6 +68,7 @@
   position: static
   flex-direction: row
   width: 100%
+  max-width: 830px
   height: 100%
   min-height: auto
   margin: 0 
@@ -75,6 +76,7 @@
   background-color: transparent
   ransition: 0s
   white-space: nowrap
+  justify-content: center
   .nav-item
     color: #45413e
     margin: 0 5px
@@ -95,7 +97,7 @@
       a
         text-decoration: none
         color: #fff
-        font-size: 14px
+        font-size: 16px
         font-weight: normal
         font-family: lato
 
@@ -115,11 +117,11 @@ h6
   &:hover
     .dropdown-menu
       position: absolute
-      display: block
+      justify-content: center
+      display: flex
       background-color: #262a32
       margin-top: 1px
-      padding: 25px
-      top: 78px
+      top: 78px 
       .col-md-2
         margin: 0px 10px
       h6
@@ -127,16 +129,23 @@ h6
         padding-bottom: 15px
         white-space: nowrap
       li
-        padding: 3px
+        padding-top: 10px
+        padding-left: 3px
         padding-right: 50px
       a
         &:hover
           color: $accent
           text-decoration: none
 
+  .main-menu-wrapper
+    display: flex
+    max-width: 1280px
+    margin: 0 auto
+    padding: 60px 0 50px
+
 .menu-pic
   display: block
-  max-width: 370px
+  min-width: 370px
   margin-left: 50px
 
 .menu-img
