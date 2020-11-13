@@ -1,5 +1,7 @@
 @import config
 
+// header sass
+
 .header
   max-width: 1280px
   width: 100%
@@ -165,7 +167,7 @@ h6
   opacity: 0.5
   border: none
   outline: none
-  margin-top: 3px
+  margin-top: 2px
 
 .user-box
   display: flex
@@ -178,4 +180,139 @@ h6
   img
     width: 28px
     opacity: 0.5
+
+// top-slider section
+
+.top-slider
+  padding: 20px 0
+  .container
+    padding: 0 15px
+  .top-slider-carousel
+    width: 100%
+    position: relative
+    padding: 30px 15px 70px
+    background: no-repeat right
+    background-size: cover
+    color: white
+    border-radius: 5px
+  .top-slider-carousel-first
+    background-image: url('./../images/src/slider/slider1.png')
+    padding: 60px 60px 80px
+  .top-slider-carousel-name
+    max-width: 580px
+    margin-bottom: 100px
+    font-size: 48px
+    font-weight: 700
+    line-height: 1.3em
+  .top-slider-carousel-text
+    max-width: 400px
+    margin-bottom: 50px
+
+.top-slider  
+  .top-slider-carousel-second
+    text-align: center
+    background-image: url('./../images/src/slider/slider2.png')
+    padding: 60px 60px 80px
+    .top-slider-carousel-name
+      text-align: center
+    .top-slider-carousel-text
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      max-width: 400px
+      margin-bottom: 50px
+
+.top-slider
+  .top-slider-carousel-third
+    text-align: right
+    background-image: url('./../images/src/slider/slider3.png')
+    padding: 60px 60px 80px
+    .top-slider-carousel-name
+      margin-left: auto
+      text-align: right
+    .top-slider-carousel-text
+      margin-left: auto
+      text-align: right
+      max-width: 400px
+      margin-bottom: 50px
+
+.top-slider-carousel-button
+  margin: 0 auto
+  color: #fff
+  font-size: 14px
+  &:hover
+    a
+      text-decoration: none
+
+.button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  height: 40px
+  padding: 0 30px
+  border: 2px solid rgba(255,255,255, .5)
+  border-radius: 40px
+  font-family: "Lato Bold",sans-serif
+  text-transform: uppercase
+  text-decoration: none
+  white-space: nowrap
+  &:hover
+    text-decoration: none
+    color: #fff
+
+
+.top-side
+  flex-direction: column
+
+.top-side-sale
+  background:  url('../images/src/sales/palm-tree.svg') no-repeat left bottom -30px, $accent
+  flex-direction: column
+  justify-content: space-evenly
+  height: 335px
+  background-size: 75%
+  border-radius: 5px
+  color: white
+
+.top-side-sale-percent
+  font-size: 100px
+  font-weight: 900
+  text-align: center
+  margin-top: 20px
+
+.top-side-sale-text
+  text-transform: uppercase
+  text-align: center
+  font-size: 24px
+
+.top-side-sale-facebook
+  margin-top: auto
+  text-align: center
+
+.top-side-sale-heading
+  margin-bottom: 10px
+  font-size: 18px
+
+.top-side-sale-facebook-text
+  margin-bottom: 25px
+  font-size: 14px
+
+.facebook-link
+  color: #3a5b96
+  justify-content: space-between
+  border-color: #3a5b96
+  font-size: 14px
+  width: 160px
+  &:hover
+    color: #fff
+    background-color: #3a5b96
+    text-decoration: none
+  img
+    width: 22%
+    color: #3a5b96
+    filter: invert(35%) sepia(7%) saturate(4576%) hue-rotate(180deg) brightness(90%) contrast(88%)
+    
+.facebook-link
+  &:hover
+    img
+      filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(230deg) brightness(106%) contrast(100%)
 
