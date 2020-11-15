@@ -71,6 +71,7 @@
     li
       padding-left: 20px
 
+
 .navbar-nav
   position: static
   flex-direction: row
@@ -214,6 +215,8 @@ h6
     background-image: url('./../images/src/slider/slider2.png')
     padding: 60px 60px 80px
     .top-slider-carousel-name
+      margin-left: auto
+      margin-right: auto
       text-align: center
     .top-slider-carousel-text
       margin-left: auto
@@ -237,7 +240,8 @@ h6
       margin-bottom: 50px
 
 .top-slider-carousel-button
-  margin: 0 auto
+  margin-left: auto
+  margin-right: auto
   color: #fff
   font-size: 14px
   &:hover
@@ -260,6 +264,36 @@ h6
     text-decoration: none
     color: #fff
 
+.slider-carousel
+  .owl-dots
+    position: absolute
+    bottom: 15px
+    display: flex
+    align-items: center
+    left: 51%
+    transform: translateX(-51%)
+    .owl-dot
+      width: 12px
+      height: 12px
+      margin-right: 15px
+      border-radius: 50%
+      background-color: rgba(255,255,255,0.5)
+    .active
+      width: 16px
+      height: 16px
+      border: 3px solid white
+      background: transparent
+
+.slider-carousel
+  .owl-dots
+    .active
+      &:focus
+        outline: none
+
+.slider-carousel
+  .owl-dot
+    &:focus
+      outline: none
 
 .top-side
   flex-direction: column
@@ -301,7 +335,8 @@ h6
   justify-content: space-between
   border-color: #3a5b96
   font-size: 14px
-  width: 160px
+  font-weight: 700
+  width: 150px
   &:hover
     color: #fff
     background-color: #3a5b96
