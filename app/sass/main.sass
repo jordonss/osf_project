@@ -71,7 +71,6 @@
     li
       padding-left: 20px
 
-
 .navbar-nav
   position: static
   flex-direction: row
@@ -79,7 +78,7 @@
   max-width: 830px
   height: 100%
   min-height: auto
-  margin: 0 
+  margin: 0
   padding: 14px 0 0
   background-color: transparent
   ransition: 0s
@@ -109,7 +108,6 @@
         font-weight: normal
         font-family: lato
 
-
 .dropdown-toggle
   &::after
     margin-left: 25px
@@ -120,7 +118,6 @@ h6
   font-weight: 900
   font-size: 16px
 
-
 .nav-item
   &:hover
     .dropdown-menu
@@ -129,7 +126,7 @@ h6
       display: flex
       background-color: #262a32
       margin-top: 1px
-      top: 78px 
+      top: 78px
       .col-md-2
         margin: 0px 10px
       h6
@@ -184,6 +181,9 @@ h6
 
 // top-slider section
 
+.slider-carousel
+  padding: 0
+
 .top-slider
   padding: 20px 0
   .container
@@ -209,7 +209,7 @@ h6
     max-width: 400px
     margin-bottom: 50px
 
-.top-slider  
+.top-slider
   .top-slider-carousel-second
     text-align: center
     background-image: url('./../images/src/slider/slider2.png')
@@ -299,7 +299,7 @@ h6
   flex-direction: column
 
 .top-side-sale
-  background:  url('../images/src/sales/palm-tree.svg') no-repeat left bottom -30px, $accent
+  background: url('../images/src/sales/palm-tree.svg') no-repeat left bottom -30px, $accent
   flex-direction: column
   justify-content: space-evenly
   height: 335px
@@ -345,12 +345,11 @@ h6
     width: 22%
     color: #3a5b96
     filter: invert(35%) sepia(7%) saturate(4576%) hue-rotate(180deg) brightness(90%) contrast(88%)
-    
+
 .facebook-link
   &:hover
     img
       filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(230deg) brightness(106%) contrast(100%)
-
 
 // popular items section
 
@@ -362,12 +361,13 @@ h6
 .popular-items-heading
   display: flex
   align-items: center
-  padding: 20px
+  margin-bottom: 50px
+  font-size: 18px
   .popular-line
     flex: 1 1 auto
     height: 1px
     background-color: rgba($color: #fff, $alpha: .1)
-    
+
 .popular-items-text
   text-transform: capitalize
   white-space: nowrap
@@ -376,7 +376,7 @@ h6
 .popular-items-list
   display: flex
   flex-wrap: wrap
-  justify-content: center
+  justify-content: space-between
   a
     &:hover
       color: $accent
@@ -398,25 +398,50 @@ h6
   color: #000
   line-height: 1.3em
   padding: 15px 15px 0
+  font-size: 18px
 
 .popular-item-price
   display: flex
-  text-align: center
   align-items: center
   font-size: 14px
   justify-content: center
-  height: 40px
+  height: 50px
   color: #011847
   margin-bottom: 10px
   &::before
     content: '$ '
     margin-right: 5px
-  
-// .popular-item-button
-//   width: 90px
-//   height: 90px
-//   font-size: 32px
-//   background-color: #fff
-//   border-radius: 50%
-//   border: none
-  
+
+.popular-item-button
+  width: 90px
+  height: 90px
+  background-color: #fff
+  border-radius: 50%
+  border: none
+
+.popular-item-button-cart
+  margin-right: 20px
+
+.popular-list-item
+  &:hover
+    .popular-item-button-wrapper
+      position: absolute
+      display: flex
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: linear-gradient(rgba(46, 211, 162, .9), rgba(28, 193, 103, .9))
+      opacity: 1
+      transition: .3s
+      align-items: center
+      justify-content: center
+
+.popular-item-button-wrapper
+  position: absolute
+  opacity: 0
+
+.popular-item-buy
+  &:hover
+    .popular-item-button-wrapper
+      opacity: 0
