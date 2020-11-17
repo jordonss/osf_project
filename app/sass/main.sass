@@ -142,11 +142,11 @@ h6
           color: $accent
           text-decoration: none
 
-  .main-menu-wrapper
-    display: flex
-    max-width: 1280px
-    margin: 0 auto
-    padding: 60px 0 50px
+.main-menu-wrapper
+  display: flex
+  max-width: 1280px
+  margin: 0 auto
+  padding: 60px 0 50px
 
 .menu-pic
   display: block
@@ -180,9 +180,6 @@ h6
     opacity: 0.5
 
 // top-slider section
-
-.slider-carousel
-  padding: 0
 
 .top-slider
   padding: 20px 0
@@ -357,12 +354,15 @@ h6
   background-color: #262a32
   color: #fff
   padding: 80px 0 55px
+  .container
+    padding: 0 15px
 
 .popular-items-heading
   display: flex
   align-items: center
   margin-bottom: 50px
-  font-size: 18px
+  font-size: 22px
+  font-weight: 700
   .popular-line
     flex: 1 1 auto
     height: 1px
@@ -421,6 +421,18 @@ h6
 
 .popular-item-button-cart
   margin-right: 20px
+  color: $accent
+  font-size: 38px
+  &:hover
+    color: #fff
+    background-color: $accent
+
+.popular-item-button-fav
+  color: #e73c68
+  font-size: 38px
+  &:hover
+    color: #fff
+    background-color: #e73c68
 
 .popular-list-item
   &:hover
@@ -445,3 +457,101 @@ h6
   &:hover
     .popular-item-button-wrapper
       opacity: 0
+
+.popular-item-buy
+  .popular-item-price
+    &::before
+      display: none
+
+.popular-item-price-text
+  flex: 0 0 87px
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 90%
+  border: 2px solid #e5e5e5
+  border-top-left-radius: 20px
+  border-bottom-left-radius: 20px
+  border-right: none
+  color: $accent
+  &:hover
+    color: #fff
+    background-color: $accent
+    border-color: $accent
+
+.popular-item-price
+  a
+    &:hover
+      color: #fff
+
+.popular-item-price-button
+  height: 90%
+  border: 2px solid #e5e5e5
+  background: transparent
+  border-top-right-radius: 20px
+  border-bottom-right-radius: 20px
+  text-transform: uppercase
+  flex: 0 0 108px
+  &:hover
+    color: #fff
+    background-color: $accent
+    border-color: $accent
+
+.popular-dragons
+  background: linear-gradient(to top, rgba(103, 91, 153, .8), rgba(220, 89, 135, .8)),
+  url('../images/src/pop_items/pop8.png') right
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  padding: 30px
+
+.popular-dragons-icon
+  text-transform: uppercase
+  margin-top: 25px
+  font-size: 14px
+  i
+    color: $accent
+  .fa-comment-o
+    transform: translateY(-11px) translateX(-6px)
+    font-size: 14px
+
+.popular-load-more
+  display: flex
+  justify-content: center
+  min-width: 250px
+  background: transparent
+  margin: 35px auto 0
+  border-color: #fff
+  color: #fff
+  i
+    margin-bottom: 2px
+  span
+    margin-right: 25px
+    font-weight: 700
+  &:hover
+    background-color: #fff
+    color: #262a32
+
+//banner-section
+
+.banner
+  background: url('../images/src/banner/osf_banner.png') center no-repeat
+  padding-top: 160px
+  height: 445px
+  text-align: center
+  color: #fff
+
+.banner-heading
+  text-transform: capitalize
+  font-weight: 900
+  font-size: 48px
+  margin-bottom: 35px
+
+.banner-text
+  max-width: 360px
+  margin: 0 auto
+
+
+//featured products section
+
+
