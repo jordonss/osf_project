@@ -6,14 +6,10 @@
   max-width: 1280px
   width: 100%
   height: 80px
-  margin: auto
+  margin: 0
   display: flex
   border-bottom: 1px solid rgba(177, 176, 176, .5)
   align-items: center
-
-.container
-  max-width: 1280px
-  padding: 0
 
 .header-logo
   display: flex
@@ -42,6 +38,7 @@
   justify-content: center
   align-items: center
   position: relative
+  padding-left: 0
 
 .main-menu-wrapper
   display: flex
@@ -73,17 +70,19 @@
 
 .navbar-nav
   position: static
+  display: flex
   flex-direction: row
   width: 100%
-  max-width: 830px
+  max-width: 620px
   height: 100%
+  margin-left: auto
   min-height: auto
-  margin: 0
   padding: 14px 0 0
   background-color: transparent
-  ransition: 0s
+  transition: 0s
+  align-items: center
   white-space: nowrap
-  justify-content: center
+  justify-content: space-between
   .nav-item
     color: #45413e
     margin: 0 5px
@@ -93,8 +92,9 @@
     text-decoration: none
     color: #45413e
     height: 150%
-    padding-left: 10px
-    padding-right: 20px
+    // padding-left: 10px
+    // padding-right: 20px
+    font-size: 14px
   li
     position: static
 
@@ -160,12 +160,14 @@ h6
   border-radius: 2%
 
 .main-menu-select
+  display: flex
   width: 100%
   cursor: pointer
   opacity: 0.5
   border: none
   outline: none
-  margin-top: 2px
+  margin-top: 1px
+  font-size: 14px
 
 .user-box
   display: flex
@@ -175,6 +177,7 @@ h6
   height: 100%
   padding-left: 0
   top: 20px
+  margin-left: auto
   img
     width: 28px
     opacity: 0.5
@@ -183,8 +186,6 @@ h6
 
 .top-slider
   padding: 20px 0
-  .container
-    padding: 0 15px
   .top-slider-carousel
     width: 100%
     position: relative
@@ -354,8 +355,6 @@ h6
   background-color: #262a32
   color: #fff
   padding: 80px 0 55px
-  .container
-    padding: 0 15px
 
 .popular-items-heading
   display: flex
@@ -691,3 +690,135 @@ h6
     outline: none
   &:focus
     outline: none
+
+//services section
+
+.services
+  padding: 50px 0 60px
+  background-color: #45413e
+
+.services-wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.services-img
+  flex: 0 1 30%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin-bottom: 0
+  &:nth-child(2)
+    justify-content: flex-start
+  img
+    flex: 0 1 auto
+    margin-right: 40px
+    padding-top: 10px
+    filter: invert(66%) sepia(69%) saturate(526%) hue-rotate(36deg) brightness(91%) contrast(83%)
+    width: 60px
+    height: 66px
+    &:nth-child(2)
+      margin: 0 0 0 40px
+
+.services-item
+  max-width: none
+
+.services-heading
+  font-size: 18px
+  text-transform: uppercase
+  color: #fff
+
+.services-text
+  font-size: 14px
+  color: #868380
+
+// footer section
+
+.footer
+  padding: 35px 0
+  font-size: 13px
+
+.footer-copyright
+  margin-bottom: 35px
+  text-transform: capitalize
+
+.footer-menu-first
+  padding-left: 0px
+
+.footer-menu-contact
+  margin-bottom: 20px
+  cursor: auto
+  text-transform: uppercase
+  font-weight: 700
+
+.footer-menu-address
+  flex-direction: column
+  align-items: flex-start
+  margin-bottom: 20px
+  padding: 0
+  list-style-type: none
+
+.footer-menu-address-item
+  margin-bottom: 10px
+
+.footer-email
+  a
+    text-decoration: none
+    color: #000
+    &:hover
+      color: $accent
+
+.footer-tel
+  a
+    text-decoration: none
+    color: #000
+    &:hover
+      color: $accent
+
+.footer-menu-items
+  text-transform: uppercase
+  font-weight: 700
+  margin-bottom: 20px
+
+.footer-menu-items-list
+  list-style-type: none
+  padding: 0
+  height: 240px
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 0
+  flex-direction: column
+  align-items: flex-start
+
+.footer-menu-item
+  margin-bottom: 10px
+  a
+    text-decoration: none
+    color: #000
+    text-transform: capitalize
+    &:hover
+      color: $accent
+
+.footer-menu-item-hidden
+  display: block
+  visibility: hidden
+
+.footer-socials
+  display: flex
+  justify-content: space-between
+  min-width: 150px
+  font-size: 24px
+  list-style-type: none
+
+.footer-social-item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    margin-right: 20px
+    border-radius: 50%
+    i
+      color: #7d7a77
+      &:hover
+        color: $accent
