@@ -94,8 +94,6 @@
     text-decoration: none
     color: #45413e
     height: 150%
-    // padding-left: 10px
-    // padding-right: 20px
     font-size: 14px
   li
     position: static
@@ -168,8 +166,10 @@ h6
   opacity: 0.5
   border: none
   outline: none
-  margin-top: 1px
+  margin-top: -1px
   font-size: 14px
+  justify-content: center
+  align-items: center
 
 .user-box
   display: flex
@@ -924,7 +924,7 @@ h6
 
 .toggle-password-icon
   position: absolute
-  top: 258px
+  top: 255px
   right: 70px
   width: 25px
   background: none
@@ -951,3 +951,71 @@ h6
     outline: none
   &:hover
     text-decoration: underline
+
+//cookie section
+
+.cookie
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  z-index: 1000
+  background: rgba(38,42,50,0.8)
+  &.cookie-visible
+    display: block
+  .cookie-window
+    display: flex
+    position: absolute
+    width: calc(100% - 20px)
+    padding: 15px
+    bottom: 80px
+    border-radius: 10px
+    background-color: white
+
+.cookie-window-alert
+  margin-right: 10%
+  .cookie-window-alert-heading
+    font-weight: 900
+    color: $accent
+    margin-bottom: 15px
+  .cookie-window-alert-text
+    font-size: 14px
+
+.cookie-window-alert-link
+  color: $accent
+  &:hover
+    color: $accent
+    text-decoration: underline
+
+.cookie-window-close
+  display: flex
+  position: absolute
+  top: 15px
+  right: 15px
+  margin-left: auto
+  width: 30px
+  height: 30px
+  font-size: 26px
+  background: none
+  border: none
+  align-items: center
+  justify-content: center
+  color: $accent
+  &:hover
+    background-color: $accent
+    color: #fff
+
+.cookie-window-accept
+  width: 150px
+  background: none
+  align-self: flex-end
+  justify-content: center
+  border-color: $accent
+  color: $accent
+  &:hover
+    background-color: $accent
+    border-color: $accent
+    color: #fff
+    

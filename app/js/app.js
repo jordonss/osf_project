@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+//top slider carousel js
+
   const $topSliderCarousel = $('.slider-carousel.owl-carousel');
 
   $topSliderCarousel.owlCarousel({
@@ -11,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   $topSliderCarousel.trigger('refresh.owl.carousel');
+
+// featured items carousel js
 
   const $homePageFeaturedCarousel = $('.featured-list.owl-carousel');
 
@@ -35,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   })
+
+//login window js
 
   const $headerLogin = document.querySelectorAll('.header-user-icon');
   const $loginDisplay = document.querySelector('.login');
@@ -74,6 +80,30 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       $passInput.type = 'password';
       $togglePassButton.classList.toggle('toggle-password-eye');
+    }
+  }
+
+//cookie window js
+
+  window.addEventListener('load', cookieCheck);
+
+  function cookieCheck() {
+    const cookieData = document.cookie.split(';').filter(el => el.startsWith('isVisited=')).length;
+
+    if (!cookieData) {
+      const cookieWindow = document.querySelector('.cookie');
+      cookieWindow.classList.add('cookie-visible');
+
+      const closeCookie = document.querySelector('.cookie-window-close');
+      closeCookie.addEventListener('click', () => {
+        cookieWindow.classList.remove('cookie-visible');
+      });
+
+      const cookieAccept = document.querySelector('.cookie-window-accept');
+      cookieAccept.addEventListener('click', () => {
+        cookieWindow.classList.remove('cookie-visible');
+        document.cookie = 'isVisited=true';
+      })
     }
   }
 
