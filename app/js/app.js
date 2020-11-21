@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-//top slider carousel js
+  //top slider carousel js
 
   const $topSliderCarousel = $('.slider-carousel.owl-carousel');
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   $topSliderCarousel.trigger('refresh.owl.carousel');
 
-// featured items carousel js
+  // featured items carousel js
 
   const $homePageFeaturedCarousel = $('.featured-list.owl-carousel');
 
@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
-//login window js
+  //login window js
 
-  const $headerLogin = document.querySelectorAll('.header-user-icon');
   const $loginDisplay = document.querySelector('.login');
   const $loginWindow = document.querySelector('.login-window');
+  const $headerLogin = document.querySelectorAll('.header-user-icon');
 
   $headerLogin.forEach(elem => elem.addEventListener('click', showLoginDisplay));
 
-  $loginWindow.addEventListener('click', a => {
+  $loginWindow.addEventListener('click', function (a) {
     a.stopPropagation();
   })
 
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-//cookie window js
+  //cookie window js
 
   window.addEventListener('load', cookieCheck);
 
@@ -95,16 +95,32 @@ document.addEventListener("DOMContentLoaded", function () {
       cookieWindow.classList.add('cookie-visible');
 
       const closeCookie = document.querySelector('.cookie-window-close');
-      closeCookie.addEventListener('click', () => {
+      closeCookie.addEventListener('click', function () {
         cookieWindow.classList.remove('cookie-visible');
       });
 
       const cookieAccept = document.querySelector('.cookie-window-accept');
-      cookieAccept.addEventListener('click', () => {
+      cookieAccept.addEventListener('click', function() {
         cookieWindow.classList.remove('cookie-visible');
         document.cookie = 'isVisited=true';
       })
     }
   }
+
+  // whishlist and cart counter
+
+  let itemCountWish = 0;
+
+  $('.popular-item-button-fav').on('click', function () {
+    itemCountWish++;
+    $('.itemCountWish').html(itemCountWish).css('display', 'block');
+  });
+
+  let itemCountCart = 0;
+
+  $('.popular-item-button-cart').on('click', function () {
+    itemCountCart++;
+    $('.itemCountCart').html(itemCountCart).css('display', 'block');
+  });
 
 });
