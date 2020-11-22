@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const cookieAccept = document.querySelector('.cookie-window-accept');
-      cookieAccept.addEventListener('click', function() {
+      cookieAccept.addEventListener('click', function () {
         cookieWindow.classList.remove('cookie-visible');
         document.cookie = 'isVisited=true';
       })
@@ -121,6 +121,47 @@ document.addEventListener("DOMContentLoaded", function () {
   $('.popular-item-button-cart').on('click', function () {
     itemCountCart++;
     $('.itemCountCart').html(itemCountCart).css('display', 'block');
+  });
+
+  // load more AJAX
+
+  $(".popular-load-more").on("click", function () {
+
+    $.ajax({
+      url: '../json/load-more.json',
+      dataType: 'json',
+      crossDomain: true,
+      method: 'GET',
+      success: function (data) {
+        for (let i = 0; i < data.length; i++) {
+          let item = `<div class="popular-list-item">
+                        <a href="#" class="popular-list-item-link"><img src="${data[i].imgSrc}" alt=""></a>
+                        <div class="popular-item-name">${data[i].itemName}</div>
+                        <div class="popular-item-price">${data[i].itemPrice}</div>
+                        <div class="popular-item-button-wrapper">
+								          <button class="popular-item-button popular-item-button-cart"><i class="fa fa-plus" aria-hidden="true"></i></button>
+							          	<button class="popular-item-button popular-item-button-fav"><i class="fa fa-heart" aria-hidden="true"></i></button>
+							          </div>
+                      </div>`;
+
+          $(".popular-items-list").append(item);
+        }
+        let itemCountWish = 0;
+
+        $('.popular-item-button-fav').on('click', function () {
+          itemCountWish++;
+          $('.itemCountWish').html(itemCountWish).css('display', 'block');
+        });
+
+        let itemCountCart = 0;
+
+        $('.popular-item-button-cart').on('click', function () {
+          itemCountCart++;
+          $('.itemCountCart').html(itemCountCart).css('display', 'block');
+        });
+      }
+    });
+
   });
 
 });
