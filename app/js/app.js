@@ -205,4 +205,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+// pdp carousels
+
+$('.product-img-thumb').owlCarousel({
+  items: 3,
+  dots: true,
+  margin: 10
+})
+
 });
