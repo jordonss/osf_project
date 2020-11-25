@@ -441,7 +441,7 @@ h6
   position: relative
   justify-content: space-between
   flex-direction: column
-  flex: 0 1 23%
+  flex: 0 1 270px
   border-radius: 5px
   height: 400px
   margin-bottom: 30px
@@ -1160,3 +1160,181 @@ h6
   border-bottom-right-radius: 20px
   border: none
   border-left: none
+  &:focus
+    outline: none
+
+// category landing services
+
+.cls
+  background-color: #f1edea
+  padding-bottom: 30px
+
+.bcrumbs
+  padding-top: 50px
+  margin-bottom: 20px
+  text-transform: capitalize
+  text-align: center
+  .bcrumbs-link
+    color: $accent
+    font-weight: 900
+    font-size: 14px
+  .bcrumbs-slash
+    margin-left: 8px
+    margin-right: 10px
+    font-weight: 600
+  span
+    font-weight: 900
+    font-size: 14px
+
+.cls-page-heading
+  display: flex
+  justify-content: center
+  text-align: center
+  font-size: 48px
+  font-weight: 900
+  margin-bottom: 30px
+  .cls-heading-text
+    margin: 0 30px
+
+.cls-heading-line
+  position: relative
+  height: 2px
+  top: 40px
+  flex: 1 1 auto
+  background-color: #f9f6f5
+
+.filter-wrapper
+  background-color: #fff
+  display: flex
+  height: 150px
+  padding: 15px
+  margin-bottom: 30px
+  border-radius: 4px
+  flex-wrap: wrap
+  flex-direction: column
+  justify-content: space-between
+
+.filter-item
+  display: flex
+  align-items: center
+  height: 60px
+  margin: 0
+  padding: 10px 0
+  justify-content: center
+  .filter-item-name
+    min-width: 45px
+    margin-right: 15px
+    font-size: 14px
+    font-weight: 700
+    white-space: nowrap
+
+.filter-item-select-wrapper
+  max-width: 200px
+  width: 100%
+  position: relative
+
+.select-wrapper
+  position: relative
+  width: 100%
+
+.select
+  display: none
+  position: absolute
+  z-index: 800
+  width: 100%
+  border: 2px solid $accent
+  border-radius: 20px
+  overflow: hidden
+  .select-opt
+    position: relative
+    width: 100%
+    .button
+      width: 100%
+      background-color: #fff
+      border: none
+      border-radius: 0
+      border-bottom: 2px solid #f1edea
+      justify-content: flex-start
+      &:hover
+        color: $accent
+
+.select-button
+  position: relative
+  .select-button-btn
+    width: 100%
+    background-color: #fff
+    margin-top: 7px
+    outline: none
+    &:hover
+      border: 2px solid $accent
+  .button
+    display: inline-flex
+    height: 40px
+    padding: 0 30px
+    border: 2px solid #a2a09e
+    border-radius: 40px
+    align-items: center
+    white-space: nowrap
+    text-transform: capitalize
+    text-decoration: none
+    background-color: #fff
+    justify-content: flex-start
+    font-size: 16px
+    &:hover
+      color: $accent
+
+.show
+  display: block
+
+.select-button-arrow
+  position: absolute
+  right: 15px
+  top: 28px
+  transform: translateY(-50%)
+  width: 0
+  height: 0
+  border-top: 6px solid #a2a09e
+  border-right: 6px solid transparent
+  border-left: 6px solid transparent
+
+.filter-item-color
+  max-width: 200px
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+.filter-item-color-radio
+  display: none
+
+.filter-item-color-label
+  width: 16px
+  height: 16px
+  margin: 0
+  border-radius: 50%
+  cursor: pointer
+  &:hover
+    box-shadow: 0 0 0 2px #000
+
+.cls-load-more
+  display: flex
+  justify-content: center
+  min-width: 250px
+  background: $accent
+  margin: 35px auto 0
+  border-color: transparent
+  color: #fff
+  i
+    margin-bottom: 2px
+  span
+    margin-right: 25px
+    font-weight: 700
+  &:hover
+    background-color: #fff
+    color: $accent
+    border-color: $accent
+  &:focus
+    outline: none
+
+// product detailed page 
+
+
