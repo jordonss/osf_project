@@ -1357,7 +1357,6 @@ h6
     display: block
     position: relative
     height: 100%
-    width: 100%
     max-width: 100%
     object-fit: cover
     margin: 0 auto
@@ -1376,3 +1375,151 @@ h6
       background-color: $accent
     &:focus
       outline: none
+
+.product-img-thumb
+  display: flex
+  flex-direction: column
+  align-items: center
+  max-width: 246px
+  margin: 0
+  .product-thumb-item-img
+    display: block
+    width: 76px
+    height: 76px
+    border: 2px solid #333
+    &:hover
+      border: 2px solid $accent
+    &:focus
+      outline: none
+
+.product-thumb-item.product-active-thumb
+  opacity: 1
+
+.product-thumb-item
+  display: block
+  width: 76px
+  height: 76px
+  margin-bottom: 20px
+  border: none
+  background: transparent
+  padding: 0
+  opacity: .5
+  &:focus
+    outline: none
+
+.pdp-info-price
+  font-size: 48px
+  font-weight: 900
+  margin-bottom: 20px
+
+.pdp-color
+  position: relative
+  width: 180px
+  margin-bottom: 20px
+  &:hover
+    .color-button-arrow
+      border-top-color: $accent
+  .color-button
+    width: 100%
+    text-transform: capitalize
+    background-color: #fff
+    border: 2px solid #e8e2d6
+    &:hover
+      border: 2px solid $accent
+      color: #000
+    &:focus
+      outline: none
+  .color-circle
+    position: absolute
+    top: 9px
+    left: 12px
+    background-color: #585d61
+    width: 22px
+    height: 22px
+    border-radius: 50%
+  .color-button-arrow
+    position: absolute
+    top: 18px
+    right: 16px
+    border-top: 6px solid #e8e2d6
+    border-right: 6px solid transparent
+    border-left: 6px solid transparent
+
+.pdp-number
+  display: inline-flex
+  margin-right: 20px
+  margin-bottom: 20px
+  width: 110px
+  padding: 0
+  border-color: #e8e2d6
+  background: none
+  justify-content: space-between
+
+.number-button
+  width: 36px
+  height: 36px
+  background: none
+  border: none
+  border-radius: 50%
+  font-size: 14px
+  &:focus
+    outline: none
+  &:hover
+    background-color: $accent
+    color: #fff
+
+.pdp-counter
+  display: block
+  width: 30px
+  border: none
+  text-align: center
+  outline: none
+
+.ad-to-cart
+  background-color: #fff
+  border-color: #e8e2d6
+  font-family: Lato-Bold
+  font-size: 14px
+  &:hover
+    color: #fff
+    background-color: $accent
+
+.pdp-info-text-button
+  color: $accent
+  background: none
+  border: none
+  padding: 0
+  &:hover
+    text-decoration: underline
+  &:focus
+    outline: none
+
+.pdp-print
+  background-color: #fff
+  border-color: #e8e2d6
+  font-family: Lato-Bold
+  font-size: 14px
+  &:hover
+    color: #fff
+    background-color: $accent
+
+.pdp-link
+  &:first-child
+    margin-right: 30px
+    text-transform: capitalize
+    width: auto
+
+.pdp-link
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  margin-bottom: 20px
+  margin-top: 20px
+  width: 30px
+  height: 30px
+  background: none
+  border-radius: 50%
+  color: #999
+  &:hover
+    color: $accent
+    text-decoration: none

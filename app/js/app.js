@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-// Category landing page AJAX
+  // Category landing page AJAX
 
   $(".cls-load-more").on("click", function () {
 
@@ -205,12 +205,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
-// pdp carousels
+  // pdp carousels
 
-$('.product-img-thumb').owlCarousel({
-  items: 3,
-  dots: true,
-  margin: 10
-})
+  const $pdpTopSliderCarousel = $('.product-img-thumb.owl-carousel');
+
+  $topSliderCarousel.owlCarousel({
+    items: 1,
+    loop: true,
+    dots: true,
+    animateOut: 'fadeOut'
+
+  });
+
 
 });
