@@ -207,15 +207,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // pdp carousels
 
-  const $pdpTopSliderCarousel = $('.product-img-thumb.owl-carousel');
+  // const $pdpTopSliderCarousel = $('.product-img-thumb.owl-carousel');
 
-  $topSliderCarousel.owlCarousel({
-    items: 1,
-    loop: true,
-    dots: true,
-    animateOut: 'fadeOut'
+  // $topSliderCarousel.owlCarousel({
+  //   items: 1,
+  //   loop: true,
+  //   dots: true,
+  //   animateOut: 'fadeOut'
 
-  });
+  // });
+
+  // const $pdpPopCarousel = $('.popular-items-list.owl-carousel');
+
+  // $pdpPopCarousel.owlCarousel({
+  //   items: 4,
+  //   loop: true,
+  //   dots: true,
+  //   margin: 30,
+  //   animateOut: 'fadeOut'
+
+  // });
+
+  // $pdpPopCarousel.trigger('refresh.owl.carousel');
 
 
 });

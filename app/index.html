@@ -50,7 +50,7 @@
 												<li><a href="404.html">Electronics</a></li>
 												<li><a href="404.html">Flowers & Plants</a></li>
 												<li><a href="404.html">Food</a></li>
-												
+
 												<li><a href="404.html">Gadgets</a></li>
 												<li><a href="404.html">Garden</a></li>
 												<li><a href="404.html">Grocery</a></li>
@@ -105,20 +105,24 @@
 						<a class="nav-link" href="404.html">CONTACT US</a>
 					</li>
 
-					<li class="main-menu-lang d-none d-md-flex">
-						<select class="main-menu-select">
-							<option value="EN" selected>EN</option>
-							<option value="RU">RU</option>
-							<option value="UA">UA</option>
-						</select>
+					<li class="nav-item">
+						<div class="select-wrapper">
+							<select class="main-menu-select-item">
+								<option value="EN" selected>EN</option>
+								<option value="RU">RU</option>
+								<option value="UA">UA</option>
+							</select>
+						</div>
 					</li>
 
-					<li class="main-menu-currency d-none d-md-flex">
-						<select class="main-menu-select">
-							<option value="USD" selected>$ US</option>
-							<option value="UAH">₴ UAH</option>
-							<option value="EUR">€ EUR</option>
-						</select>
+					<li class="nav-item">
+						<div class="select-wrapper">
+							<select class="main-menu-select-item">
+								<option value="USD" selected>$ US</option>
+								<option value="UAH">₴ UAH</option>
+								<option value="EUR">€ EUR</option>
+							</select>
+						</div>
 					</li>
 
 				</ul>
@@ -126,8 +130,12 @@
 				<div class="user-box d-none d-md-flex col-sm-0 col-md-2 col-lg-3">
 					<div class="search-icon"><img src="../images/src/header/search.png" alt=""></div>
 					<button class="header-user-icon"><img src="../images/src/header/user.png" alt=""></button>
-					<div class="wishlist-icon"><img src="../images/src/header/wishlist.png" alt=""><div class="itemCountWish"></div></div>
-					<a href="" class="cart-icon"><img src="../images/src/header/cart.png" alt=""><div class="itemCountCart"></div></a>
+					<div class="wishlist-icon"><img src="../images/src/header/wishlist.png" alt="">
+						<div class="itemCountWish"></div>
+					</div>
+					<a href="" class="cart-icon"><img src="../images/src/header/cart.png" alt="">
+						<div class="itemCountCart"></div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -412,7 +420,7 @@
 			<div class="row">
 
 				<div class="col-md-3 text-nowrap">
-					<div class="footer-copyright">© Copyrigth 
+					<div class="footer-copyright">© Copyrigth
 						<span class="copyright-year">2020</span>.<br>all rights reserved.
 					</div>
 					<ul class="footer-menu-first">
@@ -432,80 +440,100 @@
 				</div>
 
 				<ul class="col footer-menu">
-          <div class="footer-menu-items arrow-down">categories</div>
-          <ul class="footer-menu-items-list footer-menu-items-list-category">
-            <li class="footer-menu-item"><a href="#">alcohol</a></li>
-            <li class="footer-menu-item"><a href="#">art</a></li>
-            <li class="footer-menu-item"><a href="#">books</a></li>
-            <li class="footer-menu-item"><a href="#">drinks</a></li>
-            <li class="footer-menu-item"><a href="#">electronics</a></li>
-            <li class="footer-menu-item footer-menu-item-hidden">empty</li>
-            <li class="footer-menu-item footer-menu-item-hidden">empty</li>
-            <li class="footer-menu-item"><a href="#">home</a></li>
-            <li class="footer-menu-item"><a href="#">jewelry</a></li>
-            <li class="footer-menu-item"><a href="#">kids & baby</a></li>
-            <li class="footer-menu-item"><a href="#">men's fashion</a></li>
-            <li class="footer-menu-item"><a href="#">mobile</a></li>
-            <li class="footer-menu-item"><a href="#">motorcycles</a></li>
-            <li class="footer-menu-item"><a href="#">movies</a></li>
-            <li class="footer-menu-item"><a href="#">music</a></li>
-            <li class="footer-menu-item"><a href="#">sport</a></li>
-            <li class="footer-menu-item"><a href="#">toys</a></li>
-            <li class="footer-menu-item"><a href="#">travel</a></li>
-            <li class="footer-menu-item"><a href="#">womes's fashion</a></li>
-          </ul>
-        </ul>
-        <ul class="col-md-2 footer-menu-item">
-          <div class="footer-menu-items arrow-down">about us</div>
-          <ul class="footer-menu-items-list">
-            <li class="footer-menu-item"><a href="#">about us</a></li>
-            <li class="footer-menu-item"><a href="#">delivery</a></li>
-            <li class="footer-menu-item"><a href="#">testimonials</a></li>
-            <li class="footer-menu-item"><a href="#">contact</a></li>
-          </ul>
+					<div class="footer-menu-items arrow-down">categories</div>
+					<ul class="footer-menu-items-list footer-menu-items-list-category">
+						<li class="footer-menu-item"><a href="#">alcohol</a></li>
+						<li class="footer-menu-item"><a href="#">art</a></li>
+						<li class="footer-menu-item"><a href="#">books</a></li>
+						<li class="footer-menu-item"><a href="#">drinks</a></li>
+						<li class="footer-menu-item"><a href="#">electronics</a></li>
+						<li class="footer-menu-item footer-menu-item-hidden">empty</li>
+						<li class="footer-menu-item footer-menu-item-hidden">empty</li>
+						<li class="footer-menu-item"><a href="#">home</a></li>
+						<li class="footer-menu-item"><a href="#">jewelry</a></li>
+						<li class="footer-menu-item"><a href="#">kids & baby</a></li>
+						<li class="footer-menu-item"><a href="#">men's fashion</a></li>
+						<li class="footer-menu-item"><a href="#">mobile</a></li>
+						<li class="footer-menu-item"><a href="#">motorcycles</a></li>
+						<li class="footer-menu-item"><a href="#">movies</a></li>
+						<li class="footer-menu-item"><a href="#">music</a></li>
+						<li class="footer-menu-item"><a href="#">sport</a></li>
+						<li class="footer-menu-item"><a href="#">toys</a></li>
+						<li class="footer-menu-item"><a href="#">travel</a></li>
+						<li class="footer-menu-item"><a href="#">womes's fashion</a></li>
+					</ul>
 				</ul>
-				
+				<ul class="col-md-2 footer-menu-item">
+					<div class="footer-menu-items arrow-down">about us</div>
+					<ul class="footer-menu-items-list">
+						<li class="footer-menu-item"><a href="#">about us</a></li>
+						<li class="footer-menu-item"><a href="#">delivery</a></li>
+						<li class="footer-menu-item"><a href="#">testimonials</a></li>
+						<li class="footer-menu-item"><a href="#">contact</a></li>
+					</ul>
+				</ul>
+
 				<div class="col-md-2 footer-menu-item footer-socials">
-          <a href="https://www.facebook.com/" target="_blank" class="footer-social-item">
-            <i class="fa fa-facebook-f"></i></a>
-          <a href="https://www.google.com/" target="_blank" class="footer-social-item">
-            <i class="fa fa-google-plus"></i></a>
-          <a href="https://twitter.com/" target="_blank" class="footer-social-item">
-            <i class="fa fa-twitter"></i></a>
-          <a href="https://www.pinterest.com/" target="_blank" class="footer-social-item">
-            <i class="fa fa-pinterest"></i></a>
-        </div>
+					<a href="https://www.facebook.com/" target="_blank" class="footer-social-item">
+						<i class="fa fa-facebook-f"></i></a>
+					<a href="https://www.google.com/" target="_blank" class="footer-social-item">
+						<i class="fa fa-google-plus"></i></a>
+					<a href="https://twitter.com/" target="_blank" class="footer-social-item">
+						<i class="fa fa-twitter"></i></a>
+					<a href="https://www.pinterest.com/" target="_blank" class="footer-social-item">
+						<i class="fa fa-pinterest"></i></a>
+				</div>
 
 			</div>
 		</div>
 	</footer>
 
+	<div class="user-box-bottom-wrapper">
+		<div class="container">
+			<div class="row h-100">
+				<div class="col h-100">
+					<div class="user-box-bottom">
+						<div class="search-icon"><img src="../images/src/header/search.png" alt=""></div>
+						<button class="header-user-icon"><img src="../images/src/header/user.png" alt=""></button>
+						<div class="wishlist-icon"><img src="../images/src/header/wishlist.png" alt="">
+							<div class="itemCountWish"></div>
+						</div>
+						<a href="#" class="cart-icon"><img src="../images/src/header/cart.png" alt="">
+							<div class="itemCountCart"></div>
+						</a>
+					</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 	<div class="login">
-    <div class="container">
-      <div class="row">
-        <div class="col position-static">
-					
+		<div class="container">
+			<div class="row">
+				<div class="col position-static">
+
 					<form class="login-window">
 
-            <div class="login-window-heading login-window-heading-login">Sign in</div>
-						
-						<label for="userEmail" class="login-window-mail">email</label> 
-						<input required type="email" autocomplete="email" id="userEmail" 
-						class="login-window-input input" placeholder="Email">
+						<div class="login-window-heading login-window-heading-login">Sign in</div>
 
-            <div class="d-flex w-100 justify-content-between">
-							<label for="userPassword" class="login-window-pass">password</label> 
+						<label for="userEmail" class="login-window-mail">email</label>
+						<input required type="email" autocomplete="email" id="userEmail" class="login-window-input input"
+							placeholder="Email">
+
+						<div class="d-flex w-100 justify-content-between">
+							<label for="userPassword" class="login-window-pass">password</label>
 							<a href="#">Forgot password?</a>
 						</div>
 
-						<input required type="password" id="userPassword"
-              class="login-window-input input" placeholder="Password"
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$"
+						<input required type="password" id="userPassword" class="login-window-input input" placeholder="Password"
+							pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$"
 							title="At least 6 characters length, contain 1 numeric, 1 uppercase letter, 1 special character">
-							
+
 						<button type="button" class="toggle-password-icon toggle-password-eye">
 							<i class="fa fa-eye"></i><i class="fa fa-eye-slash"></i>
-						</button> 
+						</button>
 						<button type="submit" class="login-window-button login-window-button-login button">
 							login</button>
 						<button type="button" class="login-window-no-acc">
@@ -513,34 +541,34 @@
 						</button>
 
 					</form>
-					
-        </div>
-      </div>
-    </div>
-  </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="cookie">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col h-100">
+		<div class="container h-100">
+			<div class="row h-100">
+				<div class="col h-100">
 
-          <div class="cookie-window">
-            <div class="cookie-window-alert">
-              <div class="cookie-window-alert-heading">This website uses cookie</div>
-              <div class="cookie-window-alert-text">OSF uses its own and third-party cookie for statistical purposes, to
-                know your preferences, for website performance and interaction with social media offering publicity
-                tailored to your interests. If you continue browsing, we consider that you accept its use. You can
-                expand this information consulting our <a class="cookie-window-alert-link" href="#">cookie Policy
-                Page</a>.</div>
+					<div class="cookie-window">
+						<div class="cookie-window-alert">
+							<div class="cookie-window-alert-heading">This website uses cookie</div>
+							<div class="cookie-window-alert-text">OSF uses its own and third-party cookie for statistical purposes, to
+								know your preferences, for website performance and interaction with social media offering publicity
+								tailored to your interests. If you continue browsing, we consider that you accept its use. You can
+								expand this information consulting our <a class="cookie-window-alert-link" href="#">cookie Policy
+									Page</a>.</div>
 						</div>
-						<button class="cookie-window-close"><i class="fa fa-times"></i></button> 
+						<button class="cookie-window-close"><i class="fa fa-times"></i></button>
 						<button class="cookie-window-accept button">accept</button>
 					</div>
-					
-        </div>
-      </div>
-    </div>
-  </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/owl.carousel.min.js"></script>
