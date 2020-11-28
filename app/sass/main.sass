@@ -13,6 +13,40 @@
   .container
     height: 100%
 
+.header-burger
+  position: absolute
+  width: 30px
+  height: 30px
+  left: 15px
+  top: 22px
+  .header-burger-open
+    position: absolute
+    width: 100%
+    height: 100%
+    background: transparent
+    border: none
+    font-size: 1.5em
+    line-height: 30px
+  .header-burger-close
+    position: absolute
+    width: 100%
+    height: 100%
+    top: -60px
+    background: transparent
+    border: none
+    font-size: 1.5em
+    line-height: 30px
+
+@media screen and (max-width: 768px)
+  .header-burger
+    &:hover
+      .dropdown-menu
+        display: block
+
+@media screen and (max-width: 768px)
+  .container
+    padding: 0 20px
+
 .header-logo
   display: flex
   align-items: center
@@ -39,16 +73,28 @@
     .header-logo-img
       width: 50px
       height: 50px
-    .header-logo-osf 
-      font-size: 24px
+    .header-logo-osf
+      font-size: 26px
     .header-logo-text
-      font-size: 14px
+      font-size: 16px
+  @media screen and (max-width: 768px)
+    .header-logo-img
+      width: 70px
+      height: 70px
+    .header-logo-osf
+      font-size: 34px
+    .header-logo-text
+      font-size: 18px
 
 .main-logo
   margin-left: 10px
   align-items: center
   position: relative
   padding-left: 0
+@media screen and (max-width: 768px)
+  .main-logo
+    align-items: center
+    justify-content: center
 
 .main-menu-wrapper
   display: flex
@@ -108,6 +154,10 @@
     padding-top: 15px
   li
     position: static
+
+@media screen and (max-width: 768px)
+  .navbar-nav
+    display: none
 
 .navbar-nav
   ul
@@ -197,18 +247,19 @@ h6
     img
       width: 22px
 
-
 .search-icon
-  &:hover
-    filter: invert(79%) sepia(16%) saturate(4907%) hue-rotate(33deg) brightness(94%) contrast(73%)
+  img
+    &:hover
+      filter: invert(79%) sepia(16%) saturate(4907%) hue-rotate(33deg) brightness(94%) contrast(73%)
 
 .header-user-icon
   border: none
   background: transparent
-  &:hover
-    filter: invert(79%) sepia(16%) saturate(4907%) hue-rotate(33deg) brightness(94%) contrast(73%)
-  &:focus
-    outline: none
+  img
+    &:hover
+      filter: invert(79%) sepia(16%) saturate(4907%) hue-rotate(33deg) brightness(94%) contrast(73%)
+    &:focus
+      outline: none
 
 .wishlist-icon
   img
@@ -223,7 +274,7 @@ h6
 .itemCountWish
   position: absolute
   text-align: center
-  top: -6px
+  top: 16px
   right: 56px
   width: 20px
   height: 20px
@@ -236,10 +287,20 @@ h6
   color: $accent
   display: none
 
+@media screen and (max-width: 992px)
+  .itemCountWish
+    top: 16px
+    right: 36px
+
+@media screen and (max-width: 768px)
+  .itemCountWish
+    top: 6px
+    right: 316px
+
 .itemCountCart
   position: absolute
   text-align: center
-  top: -6px
+  top: 16px
   right: 0
   width: 20px
   height: 20px
@@ -251,6 +312,38 @@ h6
   line-height: 16px
   color: $accent
   display: none
+
+@media screen and (max-width: 768px)
+  .itemCountCart
+    top: 6px
+    right: 260px
+
+@media screen and (max-width: 768px)
+  .user-box-bottom-wrapper
+    display: flex
+    width: 100%
+    position: fixed
+    z-index: 1000
+    bottom: 0
+    height: 60px
+    .container
+      padding: 0
+  .user-box-bottom
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100%
+    background-color: #262a32
+    img
+      height: 35px
+      width: 35px
+      margin: 0 10px
+      filter: invert(57%) sepia(29%) saturate(15%) hue-rotate(336deg) brightness(100%) contrast(92%)
+      &:hover
+        filter: invert(53%) sepia(72%) saturate(457%) hue-rotate(40deg) brightness(108%) contrast(91%)
+    .header-user-icon
+      &:focus
+        outline: none
 
 // top-slider section
 
@@ -312,9 +405,10 @@ h6
   margin-right: auto
   color: #fff
   font-size: 14px
+  font-weight: 600
   &:hover
-    a
-      text-decoration: none
+    background-color: #fff
+    text-decoration: none
 
 .button
   display: inline-flex
@@ -324,13 +418,12 @@ h6
   padding: 0 30px
   border: 2px solid rgba(255,255,255, .5)
   border-radius: 40px
-  font-family: "Lato Bold",sans-serif
   text-transform: uppercase
   text-decoration: none
   white-space: nowrap
   &:hover
     text-decoration: none
-    color: #fff
+    color: #262a32
 
 .slider-carousel
   .owl-dots
@@ -569,6 +662,8 @@ h6
     color: #fff
     background-color: $accent
     border-color: $accent
+  &:focus
+    outline: none
 
 .popular-dragons
   background: linear-gradient(to top, rgba(103, 91, 153, .8), rgba(220, 89, 135, .8)),
@@ -606,6 +701,10 @@ h6
     color: #262a32
   &:focus
     outline: none
+
+@media screen and (max-width: 1200px)
+  .popular-load-more
+    display: none
 
 //banner-section
 
@@ -776,14 +875,17 @@ h6
   flex-direction: row
   justify-content: space-between
 
+@media screen and (max-width: 768px)
+  .services-wrapper
+    display: flex
+    flex-direction: column
+
 .services-img
   flex: 0 1 30%
   display: flex
   align-items: center
   justify-content: flex-end
   margin-bottom: 0
-  &:nth-child(2)
-    justify-content: flex-start
   img
     flex: 0 1 auto
     margin-right: 40px
@@ -796,6 +898,9 @@ h6
 
 .services-item
   max-width: none
+@media screen and (max-width: 768px)
+  .services-item
+    max-width: 160px
 
 .services-heading
   font-size: 18px
@@ -805,6 +910,11 @@ h6
 .services-text
   font-size: 14px
   color: #868380
+
+@media screen and (max-width: 768px)
+  .services-img
+    &:nth-child(2) 
+      flex-direction: row-reverse
 
 // footer section
 
@@ -864,6 +974,16 @@ h6
   flex-direction: column
   align-items: flex-start
 
+@media screen and (max-width: 768px)
+  .footer
+    padding-bottom: 50px
+  .footer-menu
+    margin-bottom: 0
+  .footer-menu-items-list
+    display: none
+  .footer-menu-address
+    display: none
+
 .footer-menu-item
   margin-bottom: 10px
   a
@@ -896,6 +1016,10 @@ h6
     color: #7d7a77
     &:hover
       color: $accent
+
+@media screen and (max-width: 768px)
+  .footer-socials
+    justify-content: center
 
 // login window
 
@@ -1544,7 +1668,7 @@ h6
   justify-content: center
   background-color: #fff
   padding: 0
-  
+
 .nav-pills
   .nav-link.active
     background-color: #262a33

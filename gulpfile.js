@@ -1,18 +1,16 @@
-// VARIABLES & PATHS
-
-let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
-		fileswatch   = 'html,htm,txt,json,md,woff2', // List of files extensions for watching & hard reload (comma separated)
-		imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
-		baseDir      = 'app', // Base directory path without «/» at the end
-		online       = true; // If «false» - Browsersync will work offline without internet connection
+let preprocessor = 'sass', 
+		fileswatch   = 'html,htm,txt,json,md,woff2', 
+		imageswatch  = 'jpg,jpeg,png,webp,svg', 
+		baseDir      = 'app', 
+		online       = true; 
 
 let paths = {
 
 	scripts: {
 		src: [
-			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			'node_modules/jquery/dist/jquery.min.js', 
 			'node_modules/owl.carousel/dist/owl.carousel.min.js',
-			baseDir + '/js/app.js' // app.js. Always at the end
+			baseDir + '/js/app.js' 
 		],
 		dest: baseDir + '/js',
 	},

@@ -40,6 +40,73 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
+
+// popular items carousel
+
+const $PopularCarousel = $('.popular-items-list.owl-carousel');
+
+if (window.innerWidth < 1200) {
+    $PopularCarousel.owlCarousel({
+        items: 1,
+        loop: true,
+        dots: true,
+        animateOut: 'fadeOut',
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2,
+                margin: 10,
+                dotsEach: 2
+            },
+            992: {
+                items: 3,
+                margin: 15,
+            }
+        }
+    });
+}
+
+let prevWidth = window.innerWidth; 
+
+window.addEventListener('resize', initHomePageSlider);
+
+function initHomePageSlider () {
+    const newWidth = window.innerWidth;
+    
+    if (newWidth > prevWidth && newWidth >= 1200) {
+        $PopularCarousel.trigger('destroy.owl.carousel');
+    }
+    else if (newWidth < prevWidth) {
+        
+        if (newWidth < 1200 && prevWidth <= 1200) {
+            $PopularCarousel.owlCarousel({
+                items: 1,
+                loop: true,
+                dots: true,
+                animateOut: 'fadeOut',
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    576: {
+                        items: 2,
+                        margin: 10,
+                        dotsEach: 2
+                    },
+                    992: {
+                        items: 3,
+                        margin: 15,
+                    }
+                }
+            })
+
+        }
+    }
+    prevWidth = newWidth;
+}
+
   //login window js
 
   const $loginDisplay = document.querySelector('.login');
