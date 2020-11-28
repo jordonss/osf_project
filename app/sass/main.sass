@@ -1249,11 +1249,27 @@ h6
   font-weight: 900
   color: $accent
 
+@media screen and (max-width: 992px)
+  .main-banner
+    flex-direction: column
+  .main-banner-oops
+    margin-right: 0
+
+@media screen and (max-width: 576px)
+  .main-banner-oops
+    font-size: 66px
+  .main-banner
+    padding: 25px 25px
+
 .main-banner-heading
   font-weight: 900
   font-size: 24px
   margin-bottom: 25px
   color: #000
+
+@media screen and (max-width: 992px)
+  .main-banner-heading
+    text-align: center
 
 .main-banner-link
   display: block
