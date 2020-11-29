@@ -29,10 +29,10 @@ let paths = {
 	},
 
 	deploy: {
-		hostname:    'username@yousite.com', // Deploy hostname
-		destination: 'yousite/public_html/', // Deploy destination
-		include:     [/* '*.htaccess' */], // Included files to deploy
-		exclude:     [ '**/Thumbs.db', '**/*.DS_Store' ], // Excluded files from deploy
+		hostname:    'username@yousite.com', 
+		destination: 'yousite/public_html/', 
+		include:     [], 
+		exclude:     [ '**/Thumbs.db', '**/*.DS_Store' ], 
 	},
 
 	cssOutputName: 'app.min.css',
@@ -78,7 +78,7 @@ function styles() {
 	.pipe(eval(preprocessor)())
 	.pipe(concat(paths.cssOutputName))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } },}))
 	.pipe(dest(paths.styles.dest))
 	.pipe(browserSync.stream())
 }
