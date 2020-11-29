@@ -40,72 +40,70 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 
+  // popular items carousel
 
-// popular items carousel
+  const $PopularCarousel = $('.popular-items-list.owl-carousel');
 
-const $PopularCarousel = $('.popular-items-list.owl-carousel');
-
-if (window.innerWidth < 1200) {
+  if (window.innerWidth < 1200) {
     $PopularCarousel.owlCarousel({
-        items: 1,
-        loop: true,
-        dots: true,
-        animateOut: 'fadeOut',
-        responsive: {
+      items: 1,
+      loop: true,
+      dots: true,
+      animateOut: 'fadeOut',
+      responsive: {
+        0: {
+          items: 1
+        },
+        576: {
+          items: 2,
+          margin: 10,
+          dotsEach: 2
+        },
+        992: {
+          items: 3,
+          margin: 15,
+        }
+      }
+    });
+  }
+
+  let prevWidth = window.innerWidth;
+
+  window.addEventListener('resize', initHomePageSlider);
+
+  function initHomePageSlider() {
+    const newWidth = window.innerWidth;
+
+    if (newWidth > prevWidth && newWidth >= 1200) {
+      $PopularCarousel.trigger('destroy.owl.carousel');
+    } else if (newWidth < prevWidth) {
+
+      if (newWidth < 1200 && prevWidth <= 1200) {
+        $PopularCarousel.owlCarousel({
+          items: 1,
+          loop: true,
+          dots: true,
+          animateOut: 'fadeOut',
+          responsive: {
             0: {
-                items: 1
+              items: 1
             },
             576: {
-                items: 2,
-                margin: 10,
-                dotsEach: 2
+              items: 2,
+              margin: 10,
+              dotsEach: 2
             },
             992: {
-                items: 3,
-                margin: 15,
+              items: 3,
+              margin: 15,
             }
-        }
-    });
-}
+          }
+        })
 
-let prevWidth = window.innerWidth; 
-
-window.addEventListener('resize', initHomePageSlider);
-
-function initHomePageSlider () {
-    const newWidth = window.innerWidth;
-    
-    if (newWidth > prevWidth && newWidth >= 1200) {
-        $PopularCarousel.trigger('destroy.owl.carousel');
-    }
-    else if (newWidth < prevWidth) {
-        
-        if (newWidth < 1200 && prevWidth <= 1200) {
-            $PopularCarousel.owlCarousel({
-                items: 1,
-                loop: true,
-                dots: true,
-                animateOut: 'fadeOut',
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    576: {
-                        items: 2,
-                        margin: 10,
-                        dotsEach: 2
-                    },
-                    992: {
-                        items: 3,
-                        margin: 15,
-                    }
-                }
-            })
-
-        }
+      }
     }
     prevWidth = newWidth;
-}
+  }
 
   //login window js
 
@@ -272,30 +270,48 @@ function initHomePageSlider () {
 
   });
 
-  // pdp carousels
+  // pdp js
 
-  // const $pdpTopSliderCarousel = $('.product-img-thumb.owl-carousel');
+  const $pdpImg = document.querySelector('.product-image');
+  const $pdpButton = document.querySelectorAll('.product-thumb-item');
 
-  // $topSliderCarousel.owlCarousel({
-  //   items: 1,
-  //   loop: true,
-  //   dots: true,
-  //   animateOut: 'fadeOut'
+  $pdpButton.forEach(elem => {
+    elem.addEventListener('click', switchImg);
+  });
 
-  // });
+  function switchImg(e) {
+    const imgUrl = e.currentTarget.dataset.url;
+    $pdpImg.src = imgUrl;
 
-  // const $pdpPopCarousel = $('.popular-items-list.owl-carousel');
+    $pdpButton.forEach(elem => elem.classList.remove('product-active-thumb'));
+    e.currentTarget.classList.add('product-active-thumb');
 
-  // $pdpPopCarousel.owlCarousel({
-  //   items: 4,
-  //   loop: true,
-  //   dots: true,
-  //   margin: 30,
-  //   animateOut: 'fadeOut'
+  };
 
-  // });
+  $(".pdp-counter").on('keypress', function (e) {
+    if (e.charCode != 8 && e.charCode != 0 && (e.charCode < 48 || e.charCode > 57)) {
+      return false;
+    }
+  });
 
-  // $pdpPopCarousel.trigger('refresh.owl.carousel');
+  const amount = document.querySelector('.pdp-counter');
 
+  const $plusButton = document.querySelector('.plus-button');
+  $plusButton.addEventListener('click', () => amountChange('plus'));
+
+  const $minusButton = document.querySelector('.minus-button');
+  $minusButton.addEventListener('click', () => amountChange('minus'));
+
+  function amountChange(arg) {
+    if (arg === 'plus') {
+      amount.value = +amount.value + 1;
+    } else if (arg === 'minus' && +amount.value > 0) {
+      amount.value = +amount.value - 1;
+    }
+  }
+
+  const $print = document.querySelector('.pdp-print');
+
+  $print.addEventListener('click', () => window.print());
 
 });

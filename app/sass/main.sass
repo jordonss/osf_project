@@ -255,6 +255,8 @@ h6
 .header-user-icon
   border: none
   background: transparent
+  &:focus
+    outline: none
   img
     &:hover
       filter: invert(79%) sepia(16%) saturate(4907%) hue-rotate(33deg) brightness(94%) contrast(73%)
@@ -297,6 +299,11 @@ h6
     top: 6px
     right: 316px
 
+@media screen and (max-width: 320px)
+  .itemCountWish
+    top: 6px
+    right: 105px
+
 .itemCountCart
   position: absolute
   text-align: center
@@ -317,6 +324,11 @@ h6
   .itemCountCart
     top: 6px
     right: 260px
+
+@media screen and (max-width: 320px)
+  .itemCountCart
+    top: 6px
+    right: 50px
 
 @media screen and (max-width: 768px)
   .user-box-bottom-wrapper
@@ -369,6 +381,11 @@ h6
   .top-slider-carousel-text
     max-width: 400px
     margin-bottom: 50px
+
+@media screen and (max-width: 768px)
+  .top-slider
+    .top-slider-carousel-name
+      font-size: 32px
 
 .top-slider
   .top-slider-carousel-second
@@ -913,7 +930,7 @@ h6
 
 @media screen and (max-width: 768px)
   .services-img
-    &:nth-child(2) 
+    &:nth-child(2)
       flex-direction: row-reverse
 
 // footer section
@@ -1128,6 +1145,10 @@ h6
   &:hover
     text-decoration: underline
 
+@media screen and (max-width: 576px)
+  .login-window
+    width: calc(100% - 30px)
+
 //cookie section
 
 .cookie
@@ -1182,6 +1203,8 @@ h6
   &:hover
     background-color: $accent
     color: #fff
+  &:focus
+    outline: none
 
 .cookie-window-accept
   width: 150px
@@ -1194,6 +1217,8 @@ h6
     background-color: $accent
     border-color: $accent
     color: #fff
+  &:focus
+    outline: none
 
 //404 page
 
@@ -1370,6 +1395,16 @@ h6
   flex-direction: column
   justify-content: space-between
 
+@media screen and (max-width: 992px)
+  .filter-wrapper
+    flex-wrap: wrap
+    height: 210px
+
+@media screen and (max-width: 768px)
+  .filter-wrapper
+    display: flex
+    height: auto
+
 .filter-item
   display: flex
   align-items: center
@@ -1491,6 +1526,27 @@ h6
   &:focus
     outline: none
 
+@media screen and (max-width: 768px)
+  .cls-load-more
+    display: none
+
+@media screen and (max-width: 992px)
+  .cls
+    .popular-list-item
+      &:nth-child(7),&:nth-child(8),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12),&:nth-child(13),&:nth-child(14),&:nth-child(15),&:nth-child(16)
+        display: none
+
+@media screen and (max-width: 768px)
+  .cls
+    .popular-list-item
+      &:nth-child(7),&:nth-child(8),&:nth-child(9),&:nth-child(10),&:nth-child(11),&:nth-child(12),&:nth-child(13),&:nth-child(14),&:nth-child(15),&:nth-child(16)
+        display: none
+
+@media screen and (max-width: 598px)
+  .cls
+    .popular-items-list
+      justify-content: space-around
+
 // product detailed page 
 
 .pdp
@@ -1501,6 +1557,10 @@ h6
   border-right: 5px
   padding: 15px
   margin-bottom: 0
+
+@media screen and (max-width: 768px)
+  .heading-text
+    font-size: 23px
 
 .product-image-wrapper
   position: relative
@@ -1529,6 +1589,19 @@ h6
       background-color: $accent
     &:focus
       outline: none
+
+@media screen and (max-width: 768px)
+  .product-image-wrapper
+    height: auto
+    .product-image-fullscr
+      top: 3px
+      left: 183px
+
+@media screen and (max-width: 320px)
+  .product-image-wrapper
+    .product-image-fullscr
+      top: 3px
+      left: 6px
 
 .product-img-thumb
   display: flex
@@ -1560,6 +1633,10 @@ h6
   opacity: .5
   &:focus
     outline: none
+
+@media screen and (max-width: 768px)
+  .product-img-thumb-wrapper
+    display: none
 
 .pdp-info-price
   font-size: 48px
@@ -1638,6 +1715,8 @@ h6
   &:hover
     color: #fff
     background-color: $accent
+  &:focus
+    outline: none
 
 .pdp-info-text-button
   color: $accent
@@ -1657,6 +1736,8 @@ h6
   &:hover
     color: #fff
     background-color: $accent
+  &:focus
+    outline: none
 
 .pdp-link
   &:first-child
@@ -1684,8 +1765,11 @@ h6
   justify-content: center
   background-color: #fff
   padding: 0
+  .nav-item
+    display: flex
 
 .nav-pills
+  display: flex
   .nav-link.active
     background-color: #262a33
     display: flex
@@ -1723,6 +1807,11 @@ h6
   column-gap: 70px
   margin-bottom: 20px
 
+@media screen and (max-width: 768px)
+  .tabs,
+  .tabs-text-content
+    display: none
+
 .pdp-popular-items-heading
   display: flex
   align-items: center
@@ -1742,3 +1831,18 @@ h6
 
 .popular-items-list.col
   padding: 0
+
+@media print
+  .header,
+  .footer,
+  .services,
+  .bcrumbs,
+  .page-heading,
+  .product-img-thumb-wrapper,
+  .tabs,
+  .tabs-text-content,
+  .tab-content,
+  .pdp-popular-items-heading,
+  .popular-items-list.owl-carousel.owl-loaded.owl-drag
+    display: none !important
+
